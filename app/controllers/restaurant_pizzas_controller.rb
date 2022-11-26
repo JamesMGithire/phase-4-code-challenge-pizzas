@@ -6,16 +6,16 @@ class RestaurantPizzasController < ApplicationController
         render json: restaurant_pizza, status: :created
     end
     
-    rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+    # rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
     
-    def index
-        render json: RestaurantPizza.all
-    end
+    # def index
+    #     render json: RestaurantPizza.all
+    # end
 
-    def show
-        restaurant_pizza = find_restaurant_pizza
-        render json: restaurant_pizza
-    end
+    # def show
+    #     restaurant_pizza = find_restaurant_pizza
+    #     render json: restaurant_pizza
+    # end
     
     
     # def destroy
