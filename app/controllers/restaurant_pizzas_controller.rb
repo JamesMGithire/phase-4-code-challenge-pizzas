@@ -3,7 +3,7 @@ class RestaurantPizzasController < ApplicationController
     
     def create
         restaurant_pizza = RestaurantPizza.create!(restaurant_pizza_params)
-        render json: {pizza: restaurant_pizza.pizza, restaurant: restaurant_pizza.restaurant}, status: :created
+        render json: restaurant_pizza, status: :created
     end
     
     rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
