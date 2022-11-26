@@ -3,7 +3,7 @@ class PizzasController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :unprocessable_entity_method
 
     def index
-        render json: Pizza.all, each_serializer: SerializedPizzaSerializer
+        render json: Pizza.all
     end
 
     def show

@@ -2,7 +2,7 @@ class RestaurantsController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
     rescue_from ActiveRecord::RecordInvalid, with: :unprocessable_entity_method
     def index
-        render json: Restaurant.all, each_serializer: SerializedRestaurantSerializer
+        render json: Restaurant.all
     end
 
     def show
